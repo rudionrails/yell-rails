@@ -6,10 +6,9 @@ Gem::Specification.new do |s|
   s.name        = "yell-rails"
   s.version     = Yell::Rails::VERSION
   s.authors     = ["Rudolf Schmidt"]
-  s.email       = ["me@rudionrails.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Meta gem for yell usage with rails}
+  s.description = %q{Use Yell conveniently with Rails with the logger already set to Yell}
 
   s.rubyforge_project = "yell-rails"
 
@@ -20,5 +19,5 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency "yell"
 end

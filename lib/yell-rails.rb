@@ -1,7 +1,12 @@
-require "yell-rails/version"
+require 'yell'
 
 module Yell
   module Rails
-    # Your code goes here...
+
+    module Railtie < Rails::Railtie
+      config.logger = Yell.new
+
+    end
+
   end
 end
