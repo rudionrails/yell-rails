@@ -13,7 +13,10 @@ module Yell
         end
 
         # init Yell
-        app.config.logger = Yell.new( path, :colorize => app.config.colorize_logging )
+        app.config.logger = Yell.new( path, 
+          :colorize => app.config.colorize_logging, 
+          :level => app.config.log_level 
+        )
       end
 
     end
