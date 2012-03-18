@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Yell::Rails::VERSION
   s.authors     = ["Rudolf Schmidt"]
   s.homepage    = ""
-  s.summar      = %q{yell-rails}
+  s.summary     = %q{yell-rails}
   s.description = %q{Yell for Rails}
 
   s.rubyforge_project = "yell"
