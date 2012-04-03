@@ -6,7 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "yell-rails"
   s.version     = Yell::Rails::VERSION
   s.authors     = ["Rudolf Schmidt"]
-  s.homepage    = ""
+
+  s.homepage    = "http://rudionrails.github.com/yell"
   s.summary     = %q{yell-rails}
   s.description = %q{Yell for Rails}
 
@@ -19,5 +20,5 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
-  s.add_runtime_dependency "yell"
+  s.add_runtime_dependency "yell", "~> 0.5"
 end
