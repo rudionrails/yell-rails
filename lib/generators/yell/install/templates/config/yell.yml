@@ -1,0 +1,15 @@
+development:
+  adapters:
+    - :file:
+        :filename: 'log/development.log'
+
+producton:
+  :level: 'gte.info'
+  :adapters:
+    - :datefile:
+        :level: 'lte.warn'
+        :filename: 'log/production.log'
+    - :datefile:
+        :level: 'gte.error'
+        :filename: 'log/error.log'
+
