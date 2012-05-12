@@ -1,14 +1,24 @@
+# The following is an example config file for yell.
+
 development:
   adapters:
     - :file:
         :filename: 'log/development.log'
 
-producton:
+production:
+  # set the minimum log level to info
   :level: 'gte.info'
+
+  # define multiple adapters: one for notice and one for error messages
   :adapters:
+    # this adapter writes all messages with a log level of warn or lower
+    # and writes to production.log
     - :datefile:
         :level: 'lte.warn'
         :filename: 'log/production.log'
+
+    # this adapter writes all messages with a log level of error or higher
+    # and writes to error.log
     - :datefile:
         :level: 'gte.error'
         :filename: 'log/error.log'
