@@ -3,7 +3,7 @@ $:.unshift File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "yell-rails"
-  s.version     = "0.10.0"
+  s.version     = "0.10.0.1"
   s.authors     = ["Rudolf Schmidt"]
 
   s.homepage    = "http://rudionrails.github.com/yell"
