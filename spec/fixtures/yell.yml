@@ -1,0 +1,42 @@
+# The following is an example config file for yell with all possible options available.
+#
+# To learn about the possible configuration options via a YAML file, read the wiki 
+# on github: https://github.com/rudionrails/yell/wiki/101-configuration-with-yaml
+
+development: &development
+  # Enable colorized log output with the following. It is handy for development
+  # or testing, but should not be turned on for staging or production. Otherwise 
+  # you will see those annoying ANSI color codes when on the remote production 
+  # machine.
+  :colors: true
+
+# we use the same settings for test that we defined for development
+test: *development
+
+# In production, you should configure yell somewhat more specific. The following 
+# is an example config - change it at your own will.
+production:
+  # Set the minimum (global) log level for Yell. If you prefer a different setup 
+  # you may comine various log levels, like:
+  #   # this will only log between :info and :fatal level
+  #   :level: 'gte.info lte.fatal'
+  :level: 'gte.info'
+
+  # Keep a max of 7 files for every adapter per default. You can leave this option 
+  # if you wish to keep all files, otherwise, Yell will cleanup any :datefile 
+  # after a rollover of 7 times.
+  :keep: 7
+
+  # define multiple adapters: one for notice and one for error messages
+  :adapters:
+    # this adapter writes all messages with a log level of warn or lower
+    # and writes to production.log (because this is your Rails.env)
+    - :datefile:
+        :level: 'lte.warn'
+
+    # this adapter writes all messages with a log level of error or higher
+    # and writes to error.log
+    - :datefile:
+        :level: 'gte.error'
+        :filename: 'log/error.log'
+

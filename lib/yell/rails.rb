@@ -5,6 +5,7 @@ require 'yell'
 
 module Yell #:nodoc:
   class Railtie < ::Rails::Railtie
+    railtie_name 'yell-rails'
 
     initializer 'yell.logger', :group => :all, :before => :initialize_logger do |app|
       # behave like the standard rails logger and create the log dir
