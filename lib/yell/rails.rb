@@ -15,9 +15,14 @@ module Yell #:nodoc:
         FileUtils.mkdir_p path
       end
 
-      # init Yell
+      # fetch yell config
       config_file = Rails.root.join( 'config', 'yell.yml' )
-      app.config.logger = config_file.file? ? Yell.load!(config_file) : Yell.new
+
+      # add to repository
+      Yell['rails'] = config_file.file? ? Yell.load!(config_file) : Yell.new
+
+      # add logger
+      app.config.logger = Yell['rails']
     end
 
     # Warn if yell.yml is not present.
