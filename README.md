@@ -1,5 +1,7 @@
 **Yell for Rails**
 
+[![Build Status](https://secure.travis-ci.org/rudionrails/yell-rails.png?branch=master)](http://travis-ci.org/rudionrails/yell-rails)
+
 If you are not yet familiar with **Yell - Your Extensible Logging Library** 
 check out the githup project under https://github.com/rudionrails/yell or jump 
 directly into the Yell wiki at https://github.com/rudionrails/yell/wiki.
