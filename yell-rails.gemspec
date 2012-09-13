@@ -7,18 +7,18 @@ Gem::Specification.new do |s|
   s.authors     = ["Rudolf Schmidt"]
 
   s.homepage    = "http://rudionrails.github.com/yell"
-  s.summary     = %q{yell-rails}
-  s.description = %q{Yell for Rails}
+  s.summary     = %q{Yell - Your Extensible Logging Library for Rails}
+  s.description = %q{Yell - Your Extensible Logging Library. Define multiple adapters, various log level combinations or message formatting options like you've never done before}
 
   s.rubyforge_project = "yell"
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = `git ls-files`.split($\)
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency "yell", ">= 0.13.2"
-
-  s.add_development_dependency "rails", ">= 3.0.0"
+  s.add_runtime_dependency "rails", ">= 3.0.0"
 end
 

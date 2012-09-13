@@ -1,8 +1,5 @@
 # encoding: utf-8
 
-require 'rails'
-require 'yell'
-
 module Yell #:nodoc:
   class Railtie < ::Rails::Railtie
     railtie_name 'yell-rails'

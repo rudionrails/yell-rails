@@ -22,7 +22,7 @@ production:
   #   :level: 'gte.info lte.fatal'
   :level: 'gte.info'
 
-  # Keep a max of 7 files for every adapter per default. You can leave this option 
+  # Keep a max of 7 files for every adapter per default. You can remove this option 
   # if you wish to keep all files, otherwise, Yell will cleanup any :datefile 
   # after a rollover of 7 times.
   :keep: 7
