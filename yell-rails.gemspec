@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "yell-rails"
-  s.version     = "1.2.1"
+  s.version     = "1.4.0"
   s.authors     = ["Rudolf Schmidt"]
 
   s.homepage    = "http://rudionrails.github.com/yell"
