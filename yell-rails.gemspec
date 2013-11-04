@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "yell-rails"
-  s.version     = "2.0.0.pre"
+  s.version     = "2.0.0"
   s.authors     = ["Rudolf Schmidt"]
 
   s.homepage    = "http://rudionrails.github.com/yell"
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency "yell", ">= 2.0.0.pre"
+  s.add_runtime_dependency "yell", "~> 2.0"
   s.add_runtime_dependency "rails", ">= 3"
 end
 
